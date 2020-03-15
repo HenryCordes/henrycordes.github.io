@@ -31,7 +31,25 @@
         var name = $('#name').val();
         var email = $('#email').val();
         var comments = $('#message').val();
-        //pretend we don't need validation
+
+        if (name === '' || name === undefined) {
+          $('#name-val').show();
+        } else {
+          $('#name-val').hide();
+        }
+
+        if (email === '' || email === undefined) {
+          $('#email-val').show();
+        } else {
+          $('#email-val').hide();
+        }
+
+        if (comments === '' || comments === undefined) {
+          $('#message-val').show();
+        } else {
+          $('#message-val').hide();
+        }
+
 
         //send to formspree
         $.ajax({
@@ -50,6 +68,13 @@
             console.log('success');
             $('#formBlock').hide();
             $('#thankyouBlock').show();
+            // setTimeout(function () {
+            //   $('#name').val = '';
+            //   $('#email').val = '';
+            //   $('#message').val = '';
+            //   $('#thankyouBlock').hide();
+            //   $('#formBlock').show();
+            // }, 5000)
           }
         });
       });
@@ -168,11 +193,21 @@
             <input type="hidden" name="_subject" value="Vraag via de website van Sanne Cordes" />
             <input type="hidden" name="_language" value="nl" />
             <div class="row 50%">
-              <div class="6u"><input type="text" id="name" name="name" placeholder="Name" /></div>
-              <div class="6u"><input type="email" id="email" name="_replyto" placeholder="Email" /></div>
+              <div class="6u">
+                <input type="text" id="name" name="name" placeholder="Name" />
+                <span id="name-val" style="display:none; color: red;">Name is required</span>
+              </div>
+              <div class="6u">
+                <input type="email" id="email" name="_replyto" placeholder="Email" />
+                <span id="email-val" style="display:none; color: red;">Email is required</span>
+              </div>
+
             </div>
             <div class="row 50%">
-              <div class="12u"><textarea name="message" id="message" placeholder="Message" rows="6"></textarea></div>
+              <div class="12u">
+                <textarea name="message" id="message" placeholder="Message" rows="6"></textarea>
+                <span id="message-val" style="display:none; color: red;">Message is required</span>
+              </div>
             </div>
             <div class="row">
               <div class="12u">
@@ -183,16 +218,17 @@
             </div>
           </form>
         </div>
-        <div id="thankyouBlock" style="display:none">
+        <div id="thankyouBlock" style="display:none; height: 415px;">
+          <br />
           <p>
             Thank you for filling out the form. I appreciate it.
           </p>
           <p>
             I will come back to you with an answer as soon as posssible.<br />
           </p>
-          <div class="icon fa-heart" style="font-size: 25px;">
-
+          <div class="icon fa-heart" style="font-size: 50px;">
           </div>
+          <br />
         </div>
 
       </div>
@@ -217,7 +253,7 @@
 
     <!-- Menu -->
     <ul class="menu">
-      <li>&copy; Sanne Cordes 2020</li>
+      <li>&copy; Sanne Cordes - 2020</li>
       <!-- <li>Design: <a href="http://www.kingkrewl.com">DevArtist</a></li> -->
     </ul>
 
