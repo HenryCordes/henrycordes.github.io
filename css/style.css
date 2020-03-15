@@ -870,21 +870,21 @@
 	}
 
 /*********************************************************************************/
-/* sanne                                                                           */
+/* video                                                                           */
 /*********************************************************************************/
 
-	#sanne {
+	#video {
 		background: url('images/overlay.png'), url('../images/one.jpg');
 		background-size: 256px 256px, cover;
 		background-attachment: fixed, fixed;
 		background-position: top left, center center;
   }
   
-  #sanne .streaming-list .icon {
+  #video .streaming-list .icon {
     margin-right: 5px;
   }
 
-  #sanne.dark .streaming-list a{
+  #video.dark .streaming-list a{
     color: #39454b;
     text-decoration: none;
   }
