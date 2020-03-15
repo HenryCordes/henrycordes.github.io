@@ -21,6 +21,41 @@
   </noscript>
   <!--[if lte IE 9]><link rel="stylesheet" href="css/ie/v9.css" /><![endif]-->
   <!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
+
+  <script type="text/javascript">
+    $(document).ready(function () {
+
+      $('#emailForm').on('submit', function (e) {
+        e.preventDefault();
+
+        var name = $('#name').val();
+        var email = $('#email').val();
+        var comments = $('#message').val();
+        //pretend we don't need validation
+
+        //send to formspree
+        $.ajax({
+          url: 'https://formspree.io/myypepab',
+          method: 'POST',
+          data: {
+            name: name,
+            _replyto: email,
+            email: email,
+            message: comments,
+            _subject: 'Vraag via de website van Sanne Cordes',
+            _language: 'nl'
+          },
+          dataType: "json",
+          success: function () {
+            console.log('success');
+            $('#formBlock').hide();
+            $('#thankyouBlock').show();
+          }
+        });
+      });
+    });	
+  </script>
+
 </head>
 
 <body>
@@ -128,22 +163,31 @@
       <div class="box container 75%">
 
         <!-- Contact Form -->
-        <form action="https://formspree.io/myypepab" method="POST">
-          <div class="row 50%">
-            <div class="6u"><input type="text" name="name" placeholder="Name" /></div>
-            <div class="6u"><input type="email" name="_replyto" placeholder="Email" /></div>
-          </div>
-          <div class="row 50%">
-            <div class="12u"><textarea name="message" placeholder="Message" rows="6"></textarea></div>
-          </div>
-          <div class="row">
-            <div class="12u">
-              <ul class="actions">
-                <li><input type="submit" value="Send Message" /></li>
-              </ul>
+        <div id="formBlock">
+          <form id="emailForm">
+            <input type="hidden" name="_subject" value="Vraag via de website van Sanne Cordes" />
+            <input type="hidden" name="_language" value="nl" />
+            <div class="row 50%">
+              <div class="6u"><input type="text" id="name" name="name" placeholder="Name" /></div>
+              <div class="6u"><input type="email" id="email" name="_replyto" placeholder="Email" /></div>
             </div>
-          </div>
-        </form>
+            <div class="row 50%">
+              <div class="12u"><textarea name="message" id="message" placeholder="Message" rows="6"></textarea></div>
+            </div>
+            <div class="row">
+              <div class="12u">
+                <ul class="actions">
+                  <li><input type="submit" value="Send Message" /></li>
+                </ul>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div id="thankyouBlock" style="display:none">
+          <p>
+            Thank you for filling out the form. I appreciate it.
+          </p>
+        </div>
 
       </div>
     </div>
