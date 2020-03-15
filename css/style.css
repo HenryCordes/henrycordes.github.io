@@ -895,7 +895,7 @@
     margin-right: 5px;
   }
 
-  #music.dark .streaming-list .icon a{
+  #music.dark .streaming-list a{
     color: #39454b;
     text-decoration: none;
   }
