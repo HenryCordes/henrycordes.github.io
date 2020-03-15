@@ -33,21 +33,21 @@
         var comments = $('#message').val();
 
         if (name === '' || name === undefined) {
-          $('#name-val').show();
+          $('#name-val').fadeIn("slow");
         } else {
-          $('#name-val').hide();
+          $('#name-val').fadeOut("slow");
         }
 
         if (email === '' || email === undefined) {
-          $('#email-val').show();
+          $('#email-val').fadeIn("slow");
         } else {
-          $('#email-val').hide();
+          $('#email-val').fadeOut("slow");
         }
 
         if (comments === '' || comments === undefined) {
-          $('#message-val').show();
+          $('#message-val').fadeIn("slow");
         } else {
-          $('#message-val').hide();
+          $('#message-val').fadeOut("slow");
         }
 
 
@@ -66,15 +66,15 @@
           dataType: "json",
           success: function () {
             console.log('success');
-            $('#formBlock').hide();
-            $('#thankyouBlock').show();
-            // setTimeout(function () {
-            //   $('#name').val = '';
-            //   $('#email').val = '';
-            //   $('#message').val = '';
-            //   $('#thankyouBlock').hide();
-            //   $('#formBlock').show();
-            // }, 5000)
+            $('#formBlock').fadeOut("slow");
+            $('#thankyouBlock').fadeIn("slow");
+            setTimeout(function () {
+              $('#name').val = '';
+              $('#email').val = '';
+              $('#message').val = '';
+              $('#thankyouBlock').fadeOut("slow");
+              $('#formBlock').fadeIn("slow");
+            }, 5000)
           }
         });
       });
@@ -94,10 +94,10 @@
     <!-- Nav -->
     <nav id="nav">
       <ul>
-        <li><a href="#intro">Sanne</a></li>
-        <li><a href="#one">What I Do</a></li>
-        <li><a href="#two">Who I Am</a></li>
-        <li><a href="#work">Music</a></li>
+        <li><a href="#intro">Home</a></li>
+        <li><a href="#sanne">Sanne</a></li>
+        <li><a href="#single">Single</a></li>
+        <li><a href="#gallery">Gallery</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
@@ -112,45 +112,41 @@
       </header>
       <p>New single 'I Wanna Be You' out!</p>
       <footer>
-        <a href="#one" class="button style2 down">More</a>
+        <a href="#sanne" class="button style2 down">More</a>
       </footer>
     </div>
   </section>
 
-  <!-- One -->
-  <section id="one" class="main style2 right dark fullscreen">
+  <!-- sanne -->
+  <section id="sanne" class="main style2 right dark fullscreen">
     <div class="content box style2">
       <header>
-        <h2>What I Do</h2>
+        <h2>Sanne</h2>
       </header>
       <p>Sanne is a self-willed or maybe even quirky talented musician who is singing ever since she could walk.
         After singing in bands like 'Bloody Rosa' she has now embarked on her own musical yourney.
       </p>
     </div>
-    <a href="#two" class="button style2 down anchored">Next</a>
+    <a href="#single" class="button style2 down anchored">Next</a>
   </section>
 
-  <!-- Two -->
-  <section id="two" class="main style2 left dark fullscreen">
+  <!-- single -->
+  <section id="single" class="main style2 left dark fullscreen">
     <div class="content box style2">
       <header>
-        <h2>Who I Am</h2>
+        <h2>Single</h2>
       </header>
-      <p>Lorem ipsum dolor sit amet et sapien sed elementum egestas dolore condimentum.
-        Fusce blandit ultrices sapien, in accumsan orci rhoncus eu. Sed sodales venenatis arcu,
-        id varius justo euismod in. Curabitur egestas consectetur magna.</p>
+      <p>On March 19 2020 her single 'I Wanna Be You' is released, it is available on all streaming services like
+        Spotify, Apple Music, etc.</p>
     </div>
-    <a href="#work" class="button style2 down anchored">Next</a>
+    <a href="#gallery" class="button style2 down anchored">Next</a>
   </section>
 
-  <!-- Work -->
-  <section id="work" class="main style3 primary">
+  <!-- gallery -->
+  <section id="gallery" class="main style3 primary">
     <div class="content container">
       <header>
-        <h2>My Work</h2>
-        <p>Lorem ipsum dolor sit amet et sapien sed elementum egestas dolore condimentum.
-          Fusce blandit ultrices sapien, in accumsan orci rhoncus eu. Sed sodales venenatis
-          arcu, id varius justo euismod in. Curabitur egestas consectetur magna vitae.</p>
+        <h2>Gallery</h2>
       </header>
 
       <!-- Lightbox Gallery  -->
@@ -241,12 +237,8 @@
 
     <!-- Icons -->
     <ul class="actions">
-      <!-- <li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li> -->
       <li><a href="https://www.facebook.com/Sanne-Cordes-312011759281700/" class="icon fa-facebook"><span
             class="label">Facebook</span></a></li>
-      <!-- <li><a href="#" class="icon fa-google-plus"><span class="label">Google+</span></a></li>
-      <li><a href="#" class="icon fa-dribbble"><span class="label">Dribbble</span></a></li>
-       -->
       <li><a href="https://www.instagram.com/honingpil/" class="icon fa-instagram"><span
             class="label">Instagram</span></a></li>
       <li><a href="#" class="icon fa-spotify"><span class="label">Spotify</span></a></li>
