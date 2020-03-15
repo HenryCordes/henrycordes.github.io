@@ -870,10 +870,10 @@
 	}
 
 /*********************************************************************************/
-/* One                                                                           */
+/* sanne                                                                           */
 /*********************************************************************************/
 
-	#one {
+	#sanne {
 		background: url('images/overlay.png'), url('../images/one.jpg');
 		background-size: 256px 256px, cover;
 		background-attachment: fixed, fixed;
@@ -881,10 +881,10 @@
 	}
 
 /*********************************************************************************/
-/* Two                                                                           */
+/* single                                                                           */
 /*********************************************************************************/
 
-	#two {
+	#single {
 		background: url('images/overlay.png'), url('../images/two.jpg');
 		background-size: 256px 256px, cover;
 		background-attachment: fixed, fixed;
@@ -892,16 +892,16 @@
 	}
 
 /*********************************************************************************/
-/* Work                                                                          */
+/* gallery                                                                          */
 /*********************************************************************************/
 
-	#work {
+	#gallery {
 	}
 
-		#work .row.images {
+		#gallery .row.images {
 		}
 
-			#work .row.images .image {
+			#gallery .row.images .image {
 				position: relative;
 				top: 0;
 				left: 0;
@@ -920,26 +920,26 @@
 				transform: translateZ(0);
 			}
 
-			#work .row.images.inactive {
+			#gallery .row.images.inactive {
 			}
 
-				#work .row.images.inactive .image {
+				#gallery .row.images.inactive .image {
 					opacity: 0;
 				}
 
-				#work .row.images.inactive .image.from-left {
+				#gallery .row.images.inactive .image.from-left {
 					left: -14em;
 				}
 
-				#work .row.images.inactive .image.from-right {
+				#gallery .row.images.inactive .image.from-right {
 					left: 14em;
 				}
 
-				#work .row.images.inactive .image.from-top {
+				#gallery .row.images.inactive .image.from-top {
 					top: -7em;
 				}
 
-				#work .row.images.inactive .image.from-bottom {
+				#gallery .row.images.inactive .image.from-bottom {
 					top: 7em;
 				}
 
