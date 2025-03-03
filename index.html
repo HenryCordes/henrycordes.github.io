@@ -1,299 +1,311 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
-
-<head>
-  <title>Sanne Cordes</title>
-  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-  <meta name="description" content="The official website of Sanne Cordes, an artist with an extraordinary voice that introduces people into her dreamlike world. Her 'soft' and sensitive songs show her vulnerability and the movie that is playing on the silver screen in her mind" />
-  <meta name="keywords" content="Sanne, Sanne Cordes, offical artist website, music, I Wanna Be You, pop, pop music, music-video" />
-  <!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
-  <script src="js/jquery.min.js"></script>
-  <script src="js/jquery.poptrox.min.js"></script>
-  <script src="js/jquery.scrolly.min.js"></script>
-  <script src="js/jquery.scrollex.min.js"></script>
-  <script src="js/skel.min.js"></script>
-  <script src="js/init.js"></script>
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  <link rel="manifest" href="/site.webmanifest">
-  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
-  <meta name="msapplication-TileColor" content="#da532c">
-  <meta name="theme-color" content="#ffffff">
-  <noscript>
-    <link rel="stylesheet" href="css/skel.css" />
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/style-wide.css" />
-    <link rel="stylesheet" href="css/style-normal.css" />
-  </noscript>
-  <!--[if lte IE 9]><link rel="stylesheet" href="css/ie/v9.css" /><![endif]-->
-  <!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
-
-  <script type="text/javascript">
-    $(document).ready(function () {
-
-      $('#emailForm').on('submit', function (e) {
-        e.preventDefault();
-
-        var name = $('#name').val();
-        var email = $('#email').val();
-        var comments = $('#message').val();
-
-        if (name === '' || name === undefined) {
-          $('#name-val').fadeIn("slow");
-        } else {
-          $('#name-val').fadeOut("slow");
-        }
-
-        if (email === '' || email === undefined) {
-          $('#email-val').fadeIn("slow");
-        } else {
-          $('#email-val').fadeOut("slow");
-        }
-
-        if (comments === '' || comments === undefined) {
-          $('#message-val').fadeIn("slow");
-        } else {
-          $('#message-val').fadeOut("slow");
-        }
-
-
-        //send to formspree
-        $.ajax({
-          url: 'https://formspree.io/myypepab',
-          method: 'POST',
-          data: {
-            name: name,
-            _replyto: email,
-            email: email,
-            message: comments,
-            _subject: 'Vraag via de website van Sanne Cordes',
-            _language: 'nl'
-          },
-          dataType: "json",
-          success: function () {
-            console.log('success');
-            $('#formBlock').fadeOut("slow");
-            $('#thankyouBlock').fadeIn("slow");
-            setTimeout(function () {
-              $('#name').val('');
-              $('#email').val('');
-              $('#message').val('');
-              $('#thankyouBlock').fadeOut("slow");
-              $('#formBlock').fadeIn("slow");
-            }, 5000)
-          }
-        });
-      });
-    });	
-  </script>
-
-</head>
-
-<body>
-
-  <!-- Header -->
-  <header id="header">
-
-    <!-- Logo -->
-    <h1 id="logo">Sanne Cordes</h1>
-
-    <!-- Nav -->
-    <nav id="nav">
-      <ul>
-        <li><a href="#intro">Home</a></li>
-        <li><a href="#video">Video</a></li>
-        <li><a href="#music">Music</a></li>
-        <li><a href="#gallery">Gallery</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-
-  </header>
-
-  <!-- Intro -->
-  <section id="intro" class="main style1 dark fullscreen">
-    <div class="content container 75%">
-      <header>
-        <h2>I Wanna Be You</h2>
-      </header>
-      <p>New single 'I Wanna Be You' available!</p>
-      <footer>
-        <a href="#video" class="button style2 down">More</a>
-      </footer>
-    </div>
-  </section>
-
-  <!-- video -->
-  <section id="video" class="main style2 right dark fullscreen">
-    <div class="content box style2">
-      <header>
-        <h2>Video</h2>
-      </header>
-      <p>Sanne is an artist with an extraordinary voice that introduces people into her dreamlike world.
-        Her 'soft' and sensitive songs show her vulnerability and the movie that is playing on the silver screen in her
-        mind.
-      </p>
-      <p>
-        This young artist secretly is a bit stubborn, but knows exactly what she wants. Inspired by Adele, Lana del Rey
-        and Billie Eilish she has already released several covers.
-        Sanne writes her own lyrics, devises her own videos and has a contrary form of creativity.
-        <br />
-        Here you can view the video of her song 'I Wanna Be you':
-      </p>
-      <ul class="streaming-list">
-        <li>
-          <span class="icon fa-youtube"></span><a href="https://youtu.be/wGOkpAdEZTY" target="_blank">'I Wanna Be You'
-            on Youtube</a>
-        </li>
-      </ul>
-    </div>
-    <a href="#music" class="button style2 down anchored">Next</a>
-  </section>
-
-  <!-- music -->
-  <section id="music" class="main style2 right dark fullscreen">
-    <div class="content box style2">
-      <header>
-        <h2>Music</h2>
-      </header>
-      <p>In recent years Sanne has performed with different bands and she has touched a lot of people with her voice.
-        Sanne does everything by feeling and now she is ready to release her own music.
-        She is telling her own story and lets people experience her quirky view on the world.
-      </p>
-      <p>
-        March 19th 2020 her single 'I Wanna Be You' was released, it is available on all streaming services like
-        Spotify, Apple Music, etc.
-        <br />
-        Click on a link to listen to her song 'I Wanna Be you':</p>
-      <ul class="streaming-list">
-        <li>
-          <span class="icon fa-spotify"></span><a
-            href="https://open.spotify.com/album/25rp9AwVtUFwl81LV55hO2?highlight=spotify:track:3ck45xjqaUlgaa8sYhmZfs"
-            target="_blank">Spotify</a>
-        </li>
-        <li>
-          <span class="icon fa-apple"></span><a
-            href="https://music.apple.com/nl/album/i-wanna-be-you/1502704819?i=1502704822" target="_blank">Apple
-            Music</a>
-        </li>
-      </ul>
-    </div>
-    <a href="#gallery" class="button style2 down anchored">Next</a>
-  </section>
-
-  <!-- gallery -->
-  <section id="gallery" class="main style3 primary">
-    <div class="content container">
-      <header>
-        <h2>Gallery</h2>
+  <head>
+    <title>Dev Artist</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no"
+    />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript
+      ><link rel="stylesheet" href="assets/css/noscript.css"
+    /></noscript>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+  </head>
+  <body class="is-preload landing">
+    <div id="page-wrapper">
+      <!-- Header -->
+      <header id="header">
+        <h1 id="logo">
+          <a href="index.html"
+            ><img src="images/logo-pw.png" /> <span>Dev Artist</span></a
+          >
+        </h1>
+        <nav id="nav">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <!-- <li>
+              <a href="#">Layouts</a>
+              <ul>
+                <li><a href="left-sidebar.html">Left Sidebar</a></li>
+                <li><a href="right-sidebar.html">Right Sidebar</a></li>
+                <li><a href="no-sidebar.html">No Sidebar</a></li>
+                <li>
+                  <a href="#">Submenu</a>
+                  <ul>
+                    <li><a href="#">Option 1</a></li>
+                    <li><a href="#">Option 2</a></li>
+                    <li><a href="#">Option 3</a></li>
+                    <li><a href="#">Option 4</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li><a href="elements.html">Elements</a></li>
+            <li><a href="#" class="button primary">Sign Up</a></li> -->
+          </ul>
+        </nav>
       </header>
 
-      <!-- Lightbox Gallery  -->
-      <div class="container 75% gallery">
-        <div class="row 0% images">
-          <div class="6u"><a href="images/fulls/cd-1.jpg" class="image fit from-left"><img src="images/thumbs/cd-1.jpg"
-                title="Single: I Wanna Be You" alt="Single: I Wanna Be You" /></a></div>
-          <div class="6u"><a href="images/fulls/car-8.jpg" class="image fit from-right"><img
-                src="images/thumbs/car-8.jpg" title="Sanne on horse" alt="Sanne on horse" /></a></div>
+      <!-- Banner -->
+      <section id="banner">
+        <div class="content">
+          <header>
+            <h2>Dev Artist</h2>
+            <p>Uw Partner in IT-oplossingen<br /></p>
+          </header>
+          <span class="image"><img src="images/pic01.jpg" alt="" /></span>
         </div>
-        <div class="row 0% images">
-          <div class="6u"><a href="images/fulls/car-7.jpg" class="image fit from-left"><img
-                src="images/thumbs/car-7.jpg" title="Sanne" alt="Sanne" /></a></div>
-          <div class="6u"><a href="images/fulls/two.jpg" class="image fit from-right"><img src="images/thumbs/two.jpg"
-                title="Sanne Cordes" alt="Sanne sits at the table" /></a></div>
-        </div>
-        <div class="row 0% images">
-          <div class="6u"><a href="images/fulls/car-6.jpg" class="image fit from-left"><img
-                src="images/thumbs/car-6.jpg" title="Sanne" alt="Sanne" /></a></div>
-          <div class="6u"><a href="images/fulls/car-5.jpg" class="image fit from-right"><img
-                src="images/thumbs/car-5.jpg" title="Sanne" alt="Sanne" /></a></div>
-        </div>
-      </div>
+        <a href="#one" class="goto-next scrolly">Next</a>
+      </section>
 
-    </div>
-  </section>
-
-  <!-- Contact -->
-  <section id="contact" class="main style3 secondary">
-    <div class="content container">
-      <header>
-        <h2>Say Hello.</h2>
-        <p>Send a message if you want to get info about bookings or just to say hello :-).</p>
-      </header>
-      <div class="box container 75%">
-
-        <!-- Contact Form -->
-        <div id="formBlock">
-          <form id="emailForm">
-            <input type="hidden" name="_subject" value="Vraag via de website van Sanne Cordes" />
-            <input type="hidden" name="_language" value="nl" />
-            <div class="row 50%">
-              <div class="6u">
-                <input type="text" id="name" name="name" placeholder="Name" />
-                <span id="name-val" style="display:none; color: red;">Name is required</span>
-              </div>
-              <div class="6u">
-                <input type="email" id="email" name="_replyto" placeholder="Email" />
-                <span id="email-val" style="display:none; color: red;">Email is required</span>
-              </div>
-
-            </div>
-            <div class="row 50%">
-              <div class="12u">
-                <textarea name="message" id="message" placeholder="Message" rows="6"></textarea>
-                <span id="message-val" style="display:none; color: red;">Message is required</span>
-              </div>
-            </div>
+      <!-- One -->
+      <section id="one" class="spotlight style1 bottom">
+        <span class="image fit main"
+          ><img src="images/pic02.jpg" alt=""
+        /></span>
+        <div class="content">
+          <div class="container">
             <div class="row">
-              <div class="12u">
-                <ul class="actions">
-                  <li><input type="submit" value="Send Message" /></li>
-                </ul>
+              <div class="col-4 col-12-medium">
+                <header>
+                  <h2>Realisatie van digitale ambities</h2>
+                  <p>Combinatie van creativiteit met technologie</p>
+                </header>
               </div>
+              <div class="col-4 col-12-medium">
+                <p>
+                  Bij Dev Artist combineren we creativiteit met technologie om
+                  krachtige, gebruiksvriendelijke applicaties, mobiele apps,
+                  websites en webshops te ontwerpen en ontwikkelen.
+                </p>
+              </div>
+              <div class="col-4 col-12-medium">
+                <p>
+                  Als ervaren IT-consultant helpen wij bedrijven van
+                  verschillende groottes om hun digitale ambities te realiseren
+                  en te groeien in een steeds meer verbonden wereld.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <a href="#two" class="goto-next scrolly">Next</a>
+      </section>
+
+      <!-- Two -->
+      <section id="two" class="spotlight style2 right">
+        <span class="image fit main"
+          ><img src="images/pic03.jpg" alt=""
+        /></span>
+        <div class="content">
+          <header>
+            <h2>Op maat gemaakte applicaties</h2>
+            <p>
+              Of het nu gaat om een desktopapplicatie of een complexe zakelijke
+              oplossing, wij ontwikkelen op maat gemaakte applicaties die
+              perfect aansluiten bij de behoeften van uw bedrijf.
+            </p>
+          </header>
+          <p>
+            We bouwen gebruiksvriendelijke applicaties voor web, of desktop die
+            voldoen aan de hoogste kwaliteitsnormen en die uw bedrijfsprocessen
+            optimaliseren. Onze applicaties zijn schaalbaar en flexibel en
+            kunnen worden aangepast aan de groei van uw bedrijf.
+          </p>
+          <ul class="actions">
+            <!-- <li><a href="#" class="button">Learn More</a></li> -->
+          </ul>
+        </div>
+        <a href="#three" class="goto-next scrolly">Next</a>
+      </section>
+
+      <!-- Three -->
+      <section id="three" class="spotlight style3 left">
+        <span class="image fit main bottom"
+          ><img src="images/pic04.jpg" alt=""
+        /></span>
+        <div class="content">
+          <header>
+            <h2>Apps, websites en webshops</h2>
+            <p>
+              We bouwen gebruiksvriendelijke mobiele apps voor iOS en Android,
+              die niet alleen visueel aantrekkelijk zijn, maar ook optimaal
+              presteren.
+            </p>
+          </header>
+          <p>
+            Van eenvoudige landingspagina's tot uitgebreide websites en
+            gebruiksvriendelijke en veilige webshops die uw online verkoop
+            stimuleren. Van productcatalogi tot betalingssystemen, we zorgen
+            ervoor dat uw webshop optimaal presteert en een geweldige
+            gebruikerservaring biedt.
+          </p>
+          <ul class="actions">
+            <!-- <li><a href="#" class="button">Learn More</a></li> -->
+          </ul>
+        </div>
+        <a href="#four" class="goto-next scrolly">Next</a>
+      </section>
+
+      <!-- Four -->
+      <!-- <section id="four" class="wrapper style1 special fade-up">
+        <div class="container">
+          <header class="major">
+            <h2>Accumsan sed tempus adipiscing blandit</h2>
+            <p>
+              Iaculis ac volutpat vis non enim gravida nisi faucibus posuere
+              arcu consequat
+            </p>
+          </header>
+          <div class="box alt">
+            <div class="row gtr-uniform">
+              <section class="col-4 col-6-medium col-12-xsmall">
+                <span class="icon solid alt major fa-chart-area"></span>
+                <h3>Ipsum sed commodo</h3>
+                <p>
+                  Feugiat accumsan lorem eu ac lorem amet accumsan donec.
+                  Blandit orci porttitor.
+                </p>
+              </section>
+              <section class="col-4 col-6-medium col-12-xsmall">
+                <span class="icon solid alt major fa-comment"></span>
+                <h3>Eleifend lorem ornare</h3>
+                <p>
+                  Feugiat accumsan lorem eu ac lorem amet accumsan donec.
+                  Blandit orci porttitor.
+                </p>
+              </section>
+              <section class="col-4 col-6-medium col-12-xsmall">
+                <span class="icon solid alt major fa-flask"></span>
+                <h3>Cubilia cep lobortis</h3>
+                <p>
+                  Feugiat accumsan lorem eu ac lorem amet accumsan donec.
+                  Blandit orci porttitor.
+                </p>
+              </section>
+              <section class="col-4 col-6-medium col-12-xsmall">
+                <span class="icon solid alt major fa-paper-plane"></span>
+                <h3>Non semper interdum</h3>
+                <p>
+                  Feugiat accumsan lorem eu ac lorem amet accumsan donec.
+                  Blandit orci porttitor.
+                </p>
+              </section>
+              <section class="col-4 col-6-medium col-12-xsmall">
+                <span class="icon solid alt major fa-file"></span>
+                <h3>Odio laoreet accumsan</h3>
+                <p>
+                  Feugiat accumsan lorem eu ac lorem amet accumsan donec.
+                  Blandit orci porttitor.
+                </p>
+              </section>
+              <section class="col-4 col-6-medium col-12-xsmall">
+                <span class="icon solid alt major fa-lock"></span>
+                <h3>Massa arcu accumsan</h3>
+                <p>
+                  Feugiat accumsan lorem eu ac lorem amet accumsan donec.
+                  Blandit orci porttitor.
+                </p>
+              </section>
+            </div>
+          </div>
+          <footer class="major">
+            <ul class="actions special">
+              <li><a href="#" class="button">Magna sed feugiat</a></li>
+            </ul>
+          </footer>
+        </div>
+      </section> -->
+
+      <!-- Five -->
+      <section id="five" class="wrapper style2 special fade">
+        <div class="container">
+          <header>
+            <h2>Neem contact met ons op</h2>
+            <p>
+              Bent u klaar om uw digitale ambities te realiseren? Neem vandaag
+              nog contact met ons op voor een vrijblijvende kennismaking. Wij
+              denken graag met u mee en adviseren u over de beste oplossing voor
+              uw bedrijf.
+            </p>
+          </header>
+          <form method="post" action="#" class="cta">
+            <div class="row gtr-uniform gtr-50">
+              <!-- <div class="col-8 col-12-xsmall">
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder="Jouw Email Adres"
+                />
+              </div>
+              <div class="col-4 col-12-xsmall">
+                <input type="submit" value="Neem contact op" class="fit primary" href="mailto:devartist.nl@gmail.com" />
+              </div> -->
             </div>
           </form>
+          <a
+            href="mailto:devartist.nl@gmail.com"
+            style="color: white; text-decoration: none"
+            >Klik om contact op te nemen</a
+          >
         </div>
-        <div id="thankyouBlock" style="display:none; height: 415px;">
-          <br />
-          <p>
-            Thank you for filling out the form. I appreciate it.
-          </p>
-          <p>
-            I will come back to you with an answer as soon as posssible.<br />
-          </p>
-          <div class="icon fa-heart" style="font-size: 50px;">
-          </div>
-          <br />
-        </div>
+      </section>
 
-      </div>
+      <!-- Footer -->
+      <footer id="footer">
+        <!-- <ul class="icons">
+          <li>
+            <a href="#" class="icon brands alt fa-twitter"
+              ><span class="label">Twitter</span></a
+            >
+          </li>
+          <li>
+            <a href="#" class="icon brands alt fa-facebook-f"
+              ><span class="label">Facebook</span></a
+            >
+          </li>
+          <li>
+            <a href="#" class="icon brands alt fa-linkedin-in"
+              ><span class="label">LinkedIn</span></a
+            >
+          </li>
+          <li>
+            <a href="#" class="icon brands alt fa-instagram"
+              ><span class="label">Instagram</span></a
+            >
+          </li>
+          <li>
+            <a href="#" class="icon brands alt fa-github"
+              ><span class="label">GitHub</span></a
+            >
+          </li>
+          <li>
+            <a href="#" class="icon solid alt fa-envelope"
+              ><span class="label">Email</span></a
+            >
+          </li>
+        </ul> -->
+        <ul class="copyright">
+          <li>&copy; Dev Artist. All rights reserved.</li>
+          <li>Design: <a href="http://devartist.nl">Dev Artist</a></li>
+        </ul>
+      </footer>
     </div>
-  </section>
 
-  <!-- Footer -->
-  <footer id="footer">
-
-    <!-- Icons -->
-    <ul class="actions">
-      <li><a href="https://www.facebook.com/Sanne-Cordes-312011759281700/" class="icon fa-facebook" target="blank"><span
-            class="label">Facebook</span></a></li>
-      <li><a href="https://www.instagram.com/honingpil/" class="icon fa-instagram" target="blank"><span
-            class="label">Instagram</span></a></li>
-      <li><a href="https://open.spotify.com/artist/31gyam8upqYR18KMMBgc8l" class="icon fa-spotify" target="blank"><span
-            class="label">Spotify</span></a></li>
-      <li><a href="https://music.apple.com/nl/artist/sanne-cordes/1502704820" class="icon fa-apple" target="blank"><span
-            class="label">Apple Music</span></a></li>
-    </ul>
-
-    <!-- Menu -->
-    <ul class="menu">
-      <li>Copyright &copy; 2020 - Sanne Cordes</li>
-      <!-- <li>Design: <a href="https://www.kingkrewl.com">DevArtist</a></li> -->
-    </ul>
-
-  </footer>
-
-</body>
-
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/jquery.dropotron.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
 </html>
