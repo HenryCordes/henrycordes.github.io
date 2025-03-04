@@ -2607,13 +2607,13 @@ input[type="radio"] + label:before {
 .icon.major.alt {
   text-decoration: none;
   padding-top: 8px;
+}
 
-  img {
-    margin-top: 15px;
-    width: 44px;
-    height: 44px;
-    cursor: pointer;
-  }
+.icon.major.alt img {
+  margin-top: 15px;
+  width: 44px;
+  height: 44px;
+  cursor: pointer;
 }
 
 .icon.major.alt:before {
@@ -3756,12 +3756,10 @@ body.is-touch #banner {
 
 @media screen and (min-width: 1680px) {
   /* Basic */
-  .icon.major.alt {
-    img {
-      width: 54px;
-      height: 54px;
-      margin-top: 23px;
-    }
+  .icon.major.alt img {
+    width: 54px;
+    height: 54px;
+    margin-top: 23px;
   }
 }
 
@@ -3777,10 +3775,8 @@ body.is-touch #banner {
     font-size: 13pt;
   }
 
-  .icon.major.alt {
-    img {
-      margin-top: 20px;
-    }
+  .icon.major.alt img {
+    margin-top: 20px;
   }
 }
 
@@ -3847,10 +3843,8 @@ body.is-touch #banner {
   textarea {
     font-size: 12pt;
   }
-  .icon.major.alt {
-    img {
-      margin-top: 15px;
-    }
+  .icon.major.alt img {
+    margin-top: 15px;
   }
   /* Spotlight */
 
